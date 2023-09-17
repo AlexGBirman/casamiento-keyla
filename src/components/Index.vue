@@ -62,6 +62,12 @@
       </div>
     </div>
 
+    <div class="ubicacion container-fluid text-center">
+      <p>Zsar Eventos</p>
+      <p>Av. Juan Bautista Justo 5902, C1416DLN CABA</p>
+      <button @click="verUbicacion()">Ver ubicación</button>
+    </div>
+
   </section>
 </template>
 
@@ -85,6 +91,9 @@ export default {
     updateCountdown() {
       const currentDate = new Date().getTime()
       this.timeRemaining = this.targetDate - currentDate
+    },
+    verUbicacion() {
+      window.open('https://maps.app.goo.gl/fYg4Ud32JZZASKwx9', '_blank')
     }
   },
   computed: {
@@ -103,6 +112,7 @@ export default {
   }
 
 }
+
 
 
 </script>
@@ -135,4 +145,22 @@ export default {
 .countdown-container {
   text-align: center
 }
+
+.ubicacion {
+  background: #637457;
+}
+
+p {
+  font-family: popp;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets') format('woff2'),
+       url('ruta-a-la-fuente/mifuentepersonalizada.woff') format('woff');
+  /* Agrega más formatos de fuente si es necesario */
+  font-weight: normal;
+  font-style: normal;
+}
+
 </style>
