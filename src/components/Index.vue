@@ -1,32 +1,8 @@
 <template>
   <section class="src-components-index">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="#">Key & Gusti</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Acerca de</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Servicios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container-fluid">
-      <img src="../assets/pareja-feliz.jpg" alt="Imagen de encabezado" class="img-fluid">
+    <div class="image-container">
+      <img src="../assets/pareja-feliz.jpg" alt="Imagen de encabezado" class="img-fluid h-100">
     </div>
 
     <div class="countdown-container">
@@ -142,25 +118,22 @@ export default {
 .navbar-brand {
   margin-left: 20px;
 }
+
 .countdown-container {
   text-align: center
 }
 
 .ubicacion {
   background: #637457;
+
 }
 
 p {
-  font-family: popp;
+  font-family: Poppins;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../assets') format('woff2'),
-       url('ruta-a-la-fuente/mifuentepersonalizada.woff') format('woff');
-  /* Agrega más formatos de fuente si es necesario */
-  font-weight: normal;
-  font-style: normal;
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 }
-
 </style>
