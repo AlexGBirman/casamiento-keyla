@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Index from './components/Index.vue'
 import ListaDeRegalos from './components/ListaDeRegalos.vue'
+import Portada from './components/portada.vue'
 
 /* import Binding from './components/Binding.vue' */
 
@@ -12,8 +13,9 @@ export const router = new VueRouter({
     mode: 'history',
     routes: [
         /* { path: '/', redirect: '/binding' }, */
-        {path: '/', redirect: '/index'},
+        {path: '/', redirect: '/portada'},
         {path: '/index', component: Index},
-        {path: '/lista-de-regalos', component: ListaDeRegalos}
+        {path: '/lista-de-regalos', component: ListaDeRegalos},
+        {path: '/portada', component: Portada},
     ]
 })

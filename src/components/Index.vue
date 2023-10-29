@@ -2,45 +2,59 @@
   <section class="src-components-index">
 
     <div class="image-container">
-      <img src="../assets/pareja-feliz.jpg" alt="Imagen de encabezado" class="img-fluid h-100">
+      <img src="../assets/Portada.jpg" alt="Imagen de encabezado" class="img-fluid">
     </div>
 
-    <div class="countdown-container">
-      <div class="countdown" v-if="timeRemaining > 0">
-        <h3>Faltan</h3>
-        <div class="countdown-display">
-          <div class="row">
-            <div class="col-4">
-              <h5>{{ days }}</h5>
-            </div>
-            <div class="col-4">
-              <h5>{{ minutes }}</h5>
-            </div>
-            <div class="col-4">
-              <h5>{{ seconds }}</h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4">
-              <p>días</p>
-            </div>
-            <div class="col-4">
-              <p>minutos</p>
-            </div>
-            <div class="col-4">
-              <p>segundos</p>
+
+    <!-- Contenido dentro del contenedor redondo -->
+
+
+    <div class="container-fluid p-3">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-4">
+          <div class="rounded-circle text-center p-5">
+            <div class="countdown-container">
+              <div class="countdown" v-if="timeRemaining > 0">
+                <div class="mb-4">
+                  <h3>Faltan</h3>
+                </div>
+                <div class="countdown-display">
+                  <div class="row">
+                    <div class="col-4 text-center">
+                      <h5>{{ days }}</h5>
+                    </div>
+                    <div class="col-4 text-center">
+                      <h5>{{ minutes }}</h5>
+                    </div>
+                    <div class="col-4 text-center">
+                      <h5>{{ seconds }}</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 text-center">
+                      <p>días</p>
+                    </div>
+                    <div class="col-4 text-center">
+                      <p>minutos</p>
+                    </div>
+                    <div class="col-4 text-center">
+                      <p>segundos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="countdown" v-else>
+                <h3>¡Llegó el día!</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="countdown" v-else>
-        <h3>¡Llegó el día!</h3>
-      </div>
     </div>
 
     <div class="ubicacion container-fluid text-center">
-      <p>Zsar Eventos</p>
-      <p>Av. Juan Bautista Justo 5902, C1416DLN CABA</p>
+      <p>Quinta Querandí</p>
+      <p>Azcuénaga 1318, Gral. Rodríguez, Provincia de Buenos Aires</p>
       <button @click="verUbicacion()">Ver ubicación</button>
     </div>
 
@@ -58,7 +72,7 @@ export default {
   },
   data() {
     return {
-      targetDate: new Date("2024-01-01T12:00:00").getTime(),
+      targetDate: new Date("2024-01-20T12:00:00").getTime(),
       timeRemaining: 0
 
     }
@@ -69,7 +83,7 @@ export default {
       this.timeRemaining = this.targetDate - currentDate
     },
     verUbicacion() {
-      window.open('https://maps.app.goo.gl/fYg4Ud32JZZASKwx9', '_blank')
+      window.open('https://maps.app.goo.gl/AqdWCy3hC3GdQT88A', '_blank')
     }
   },
   computed: {
@@ -94,7 +108,9 @@ export default {
 </script>
 
 <style scoped lang="css">
-.container-fluid {}
+.imagen-portada {
+  /* max-height: 90vh; */
+}
 
 .header {
   background-color: #f5f5f5;
@@ -120,7 +136,7 @@ export default {
 }
 
 .countdown-container {
-  text-align: center
+  text-align: center;
 }
 
 .ubicacion {
@@ -135,5 +151,9 @@ p {
 @font-face {
   font-family: 'Poppins';
   src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+.rounded-circle {
+  background: #C0CAAF;
 }
 </style>
