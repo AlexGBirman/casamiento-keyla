@@ -1,13 +1,38 @@
 <template>
   <section class="src-components-index">
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">Key & Gusti</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link to="/index">
+              <a class="nav-link" href="#">Inicio</a>
+            </router-link>
+          </li>
+
+          <li class="nav-item">
+            <router-link to="/lista-de-regalos">
+              <a class="nav-link" href="#">Lista de regalos</a>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="image-container">
       <img src="../assets/Portada.jpg" alt="Imagen de encabezado" class="img-fluid">
     </div>
 
+    <br>
 
-    <!-- Contenido dentro del contenedor redondo -->
-
+    <div class="frase container-fluid text-center">
+      <p>"En cuanto al asunto que tú y yo hemos hablado, esté Dios entre nosotros dos para siempre"</p>
+    </div>
 
     <div class="container-fluid p-3">
       <div class="row justify-content-center align-items-center">
@@ -49,6 +74,48 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="anillos image-container img-fluid text-center">
+      <img src="../assets/anillos.png" alt="">
+    </div>
+
+    <div class="nuestra-boda container-fluid text-center">
+      <h3>Nuestra boda</h3>
+    </div>
+
+    <div class="carousel-container text-center">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assets/carru1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/carru2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/carru3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
 
@@ -137,6 +204,7 @@ export default {
 
 .countdown-container {
   text-align: center;
+  font-family: Poppins;
 }
 
 .ubicacion {
@@ -144,16 +212,19 @@ export default {
 
 }
 
-p {
+.navbar {
   font-family: Poppins;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  src: url('../fonts/poppins-regular-webfont.woff') format('truetype');
 }
 
 .rounded-circle {
   background: #C0CAAF;
 }
-</style>
+
+.carousel-container {
+  max-width: 500px;
+}</style>

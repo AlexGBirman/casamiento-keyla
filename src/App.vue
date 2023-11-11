@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <NavBar/>
+    
     <router-view></router-view>
 
   </div>
@@ -9,12 +9,11 @@
 
 <script>
 
-import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: {
-    NavBar
+   
   }
 }
 </script>
@@ -22,5 +21,13 @@ export default {
 <style>
   body {
     background: #FFFFFA;
+  }
+
+  p {
+    font-family: Poppins;
+  }
+
+  h1 {
+    font-family: Poppins;
   }
 </style>

@@ -1,14 +1,12 @@
 <template>
-  <section class="src-components-portada">
-    <h1>src-components-portada Component</h1>
-
-    <router-link to="/index" class="container-fluid text-center centrar-contenedor">
+  <section class="src-components-portada"> <router-link to="/index" class="container-fluid text-center centrar-contenedor">
       <a href="#">
         <img src="../assets/flores inicio.png" alt="Imagen de encabezado" class="col-4 imagen-rotada">
         <hr>
-        <h1>Hola</h1>
-        <h1>Hola</h1>
-        <h1>Hola</h1>
+        <div class="portada">
+          <h3>Bienvenidos a la invitación de </h3>
+          <h1>Gusty y Kei</h1>
+        </div>
         <img src="../assets/flores inicio.png" alt="Imagen de encabezado" class="col-4">
       </a>
     </router-link>
@@ -52,4 +50,9 @@ export default {
 .imagen-rotada {
   transform: rotate(180deg);
 }
+
+h3 {
+  font-family: Poppins;
+}
+
 </style>
