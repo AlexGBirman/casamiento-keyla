@@ -20,7 +20,7 @@ export default {
 
 <style>
   body {
-    background: #FFFFFA;
+    background-color: #FFFFFA;
   }
 
   p {

@@ -1,15 +1,24 @@
 <template>
-  <section class="src-components-portada"> <router-link to="/index" class="container-fluid text-center centrar-contenedor">
-      <a href="#">
-        <img src="../assets/flores inicio.png" alt="Imagen de encabezado" class="col-4 imagen-rotada">
-        <hr>
-        <div class="portada">
-          <h3>Bienvenidos a la invitación de </h3>
-          <h1>Gusty y Kei</h1>
-        </div>
-        <img src="../assets/flores inicio.png" alt="Imagen de encabezado" class="col-4">
-      </a>
-    </router-link>
+  <section class="src-components-portada">
+    <div class="container-fluid text-center justify-content-center align-items-center">
+      <router-link to="/index">
+        <a href="#">
+          <img src="../assets/flores inicio.png" alt="Imagen de encabezado" class="col-4 imagen-rotada">
+          <hr>
+          <div class="portada">
+            <h3>Bienvenidos a la invitación de </h3>
+            <h1>Gusty y Kei</h1>
+          </div>
+          <img src="../assets/flores inicio.png" alt="Imagen de encabezado" class="col-4">
+        </a>
+      </router-link>
+      <!-- <router-link to="/index">
+        <a href="#">
+          <button>hola</button>
+        </a>
+      </router-link> -->
+    </div>
+
   </section>
 </template>
 
@@ -38,7 +47,9 @@ export default {
 </script>
 
 <style scoped lang="css">
-.src-components-portada {}
+.src-components-portada {
+  background:#FFFFFA;
+}
 
 .centrar-contenedor {
   display: flex;
@@ -54,5 +65,4 @@ export default {
 h3 {
   font-family: Poppins;
 }
-
 </style>
