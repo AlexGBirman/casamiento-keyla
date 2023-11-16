@@ -1,10 +1,10 @@
 <template>
-  <section class="src-components-index">
+  <section class="src-components-index p-5">
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="navbar-brand-container mx-auto">
         <div class="circular-container mx-auto">
-          <h5 id="header-title" class="navbar-brand mx-auto">Key & Gusti</h5>
+          <h5 id="header-title" class="navbar-brand mx-auto">Gusti y Kei</h5>
         </div>
       </div>
     </nav>
@@ -14,54 +14,57 @@
     </div>
 
     <div class="frase container-fluid text-center">
-      <p>“Y en ti confiarán los que conocen tu nombre; Por cuanto tú, oh Jehová, no desamparaste á los que te buscaron”
+      <p style="padding: 45px;">“Y en ti confiarán los que conocen tu nombre; Por cuanto tú, oh Jehová, no desamparaste á
+        los que te buscaron”
       </p>
       <p style="font-family: Italianno; font-size: xx-large;">Salmos 9:10</p>
     </div>
 
     <div class="container-fluid">
-      <div class="contenedor1"></div>
       <div class="contenedor2">
-        <!-- <div class="row justify-content-center align-items-center">
-          <div class="col-md-4"> -->
-        <div class="rounded-circle text-center p-5">
-          <div class="countdown-container">
-            <div class="countdown" v-if="timeRemaining > 0">
-              <div class="mb-4">
-                <h3>Faltan</h3>
-              </div>
-              <div class="countdown-display">
-                <div class="row">
-                  <div class="col-4 text-center">
-                    <h5>{{ days }}</h5>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-4">
+            <div class="text-center p-5">
+              <div class="countdown-container">
+                <div class="countdown" v-if="timeRemaining > 0">
+                  <div class="mb-4">
+                    <img src="../assets/fecha.jpg" alt="">
                   </div>
-                  <div class="col-4 text-center">
-                    <h5>{{ minutes }}</h5>
+                  <div class="mb-4">
+                    <h3>Faltan</h3>
                   </div>
-                  <div class="col-4 text-center">
-                    <h5>{{ seconds }}</h5>
+                  <div class="countdown-display">
+                    <div class="row">
+                      <div class="col-4 text-center">
+                        <h5>{{ days }}</h5>
+                      </div>
+                      <div class="col-4 text-center">
+                        <h5>{{ minutes }}</h5>
+                      </div>
+                      <div class="col-4 text-center">
+                        <h5>{{ seconds }}</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4 text-center">
+                        <p>días</p>
+                      </div>
+                      <div class="col-4 text-center">
+                        <p>minutos</p>
+                      </div>
+                      <div class="col-4 text-center">
+                        <p>segundos</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-4 text-center">
-                    <p>días</p>
-                  </div>
-                  <div class="col-4 text-center">
-                    <p>minutos</p>
-                  </div>
-                  <div class="col-4 text-center">
-                    <p>segundos</p>
-                  </div>
+                <div class="countdown" v-else>
+                  <h3>¡Llegó el día!</h3>
                 </div>
               </div>
-            </div>
-            <div class="countdown" v-else>
-              <h3>¡Llegó el día!</h3>
             </div>
           </div>
         </div>
-        <!-- </div>
-        </div> -->
       </div>
     </div>
 
@@ -126,10 +129,10 @@
     </div>
 
     <div class="asistencia container-fluid text-center">
+      <img src="../assets/asistencia.png" alt="" style="height: 100px;">
       <p style="font-family: Italianno; font-size: 50px;">Asistencia</p>
-      <p>Esperamos que puedas acompañarnos en este día tan especial.
-        Por favor, confirmar asistencia antes del día 13/02.
-        De no enviarnos la confirmación asumiremos que no podrás asistir.</p>
+      <p>Esperamos que puedas acompañarnos en este día tan especial. <br>
+        Por favor, confirmar asistencia antes del día 03/01/2024</p>
       <button @click="confirmarAsistencia()" class="btn btn-light btn-lg" style="font-family: Poppins;">CONFIRMAR
         ASISTENCIA</button>
     </div>
@@ -202,12 +205,6 @@ export default {
     confirmarAsistencia() {
       window.open('https://forms.gle/2WEuM3orjG7DQ1K18', '_blank')
     },
-    mostrarSiguiente() {
-      this.currentIndex = (this.currentIndex + 1) % this.imagenes.length;
-    },
-    mostrarAnterior() {
-      this.currentIndex = (this.currentIndex - 1 + this.imagenes.length) % this.imagenes.length;
-    }
   },
   computed: {
     days() {
@@ -264,18 +261,21 @@ export default {
 .countdown-container {
   text-align: center;
   font-family: Poppins;
+  background-color: #FFFFFA;
+  color: black;
+  width: 500px;
 }
 
-.ubicacion{
+.ubicacion {
   background: #C0CAAF;
   height: 200px;
   text-align: center;
   align-items: center;
 }
 
-.asistencia{
+.asistencia {
   background: #C0CAAF;
-  height: 250px;
+  height: 300px;
   text-align: center;
   align-items: center;
 }
@@ -390,10 +390,12 @@ export default {
 .contenedor2 {
   /* background-color: tra; */
   /* Color de fondo del contenedor 2 con opacidad */
+  background-image: url('../assets/fondo-countdown.jpg');
   padding: 20px;
-  position: relative;
-  z-index: 2;
+  /* position: relative;
+  z-index: 2; */
   /* Z-index más alto para el contenedor 2 */
+  height: 1000px;
   color: #fff;
   /* Color del texto en el contenedor 2 */
 }
