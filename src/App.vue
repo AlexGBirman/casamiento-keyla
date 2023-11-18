@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    
+        
     <router-view></router-view>
 
   </div>
@@ -9,10 +9,10 @@
 
 <script>
 
-
 export default {
   name: 'App',
   components: {
+
    
   }
 }
@@ -20,7 +20,7 @@ export default {
 
 <style>
   body {
-    background-color: #FFFFFA;
+    background-color: #797922;
   }
 
   p {
@@ -28,6 +28,10 @@ export default {
   }
 
   h1 {
+    font-family: Poppins;
+  }
+
+  h3 {
     font-family: Poppins;
   }
 </style>

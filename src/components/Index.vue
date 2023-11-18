@@ -1,5 +1,5 @@
 <template>
-  <section class="src-components-index p-5">
+  <section class="src-components-index container-lg">
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="navbar-brand-container mx-auto">
@@ -7,68 +7,63 @@
           <h5 id="header-title" class="navbar-brand mx-auto">Gusti y Kei</h5>
         </div>
       </div>
-    </nav>
+    </nav> <!-- hecho -->
 
     <div class="image-container mt-5">
-      <img src="../assets/Portada.jpg" alt="Imagen de encabezado" class="img-fluid">
-    </div>
+      <img src="../assets/Portada.jpg" alt="Imagen de encabezado" class="img-fluid" style="margin-top: 20px;">
+    </div> <!-- hecho -->
 
     <div class="frase container-fluid text-center">
-      <p style="padding: 45px;">“Y en ti confiarán los que conocen tu nombre; Por cuanto tú, oh Jehová, no desamparaste á
-        los que te buscaron”
+      <p style="padding: 30px;">
+        "Así que no son ya más dos, sino una sola carne; por tanto, <br> lo que Dios juntó, no lo separe el hombre."
       </p>
       <p style="font-family: Italianno; font-size: xx-large;">Salmos 9:10</p>
-    </div>
+    </div> <!-- hecho -->
 
-    <div class="container-fluid">
-      <div class="contenedor2">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-md-4">
-            <div class="text-center p-5">
-              <div class="countdown-container">
-                <div class="countdown" v-if="timeRemaining > 0">
-                  <div class="mb-4">
-                    <img src="../assets/fecha.jpg" alt="">
-                  </div>
-                  <div class="mb-4">
-                    <h3>Faltan</h3>
-                  </div>
-                  <div class="countdown-display">
-                    <div class="row">
-                      <div class="col-4 text-center">
-                        <h5>{{ days }}</h5>
-                      </div>
-                      <div class="col-4 text-center">
-                        <h5>{{ minutes }}</h5>
-                      </div>
-                      <div class="col-4 text-center">
-                        <h5>{{ seconds }}</h5>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-4 text-center">
-                        <p>días</p>
-                      </div>
-                      <div class="col-4 text-center">
-                        <p>minutos</p>
-                      </div>
-                      <div class="col-4 text-center">
-                        <p>segundos</p>
-                      </div>
-                    </div>
-                  </div>
+    <div class="contenedor-fecha">
+      <div class="col-md-78">
+        <div class="countdown-container">
+          <div class="countdown" v-if="timeRemaining > 0">
+            <div class="mb-4">
+              <img src="../assets/fecha.jpg" alt="" class="img-fluid" width=80%>
+            </div>
+            <div class="mb-4">
+              <h3 style="font-size: 1.3rem; margin-top: 55px;">FALTAN</h3>
+            </div>
+            <div class="countdown-display">
+              <div class="row">
+                <div class="col-4 text-center">
+                  <h5>{{ days }}</h5>
                 </div>
-                <div class="countdown" v-else>
-                  <h3>¡Llegó el día!</h3>
+                <div class="col-4 text-center">
+                  <h5>{{ minutes }}</h5>
+                </div>
+                <div class="col-4 text-center">
+                  <h5>{{ seconds }}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4 text-center">
+                  <p>días</p>
+                </div>
+                <div class="col-4 text-center">
+                  <p>minutos</p>
+                </div>
+                <div class="col-4 text-center">
+                  <p>segundos</p>
                 </div>
               </div>
             </div>
           </div>
+          <div class="countdown" v-else>
+            <h3>¡Llegó el día!</h3>
+          </div>
         </div>
       </div>
-    </div>
+    </div> <!-- hecho -->
 
     <div class="ubicacion container-fluid text-center">
+      <img src="../assets/" alt="">
       <p style="font-family: Italianno; font-size: 50px;">Quinta Querandí</p>
       <p>Azcuénaga 1318, Gral. Rodríguez, Provincia de Buenos Aires</p>
       <button @click="verUbicacion()" class="btn btn-light btn-lg" style="font-family: Poppins;">VER UBICACIÓN</button>
@@ -231,50 +226,25 @@ export default {
 </script>
 
 <style scoped lang="css">
-.imagen-portada {
-  /* max-height: 90vh; */
-}
-
-.header {
-  background-color: #f5f5f5;
-  padding: 20px;
-  text-align: center;
-  position: -webkit-sticky;
-  /* Sticky para navegadores webkit */
-  position: sticky;
-  /* Sticky para otros navegadores */
-  z-index: 999;
-  /* Asegura que el encabezado esté por encima del contenido */
-  transition: top 0.3s;
-  /* Transición suave para ocultar el encabezado */
-}
-
-.header.hidden {
-  top: -100px;
-  /* Puedes ajustar esto para ocultar completamente el encabezado */
-}
-
-.navbar-brand {
-  /* margin-left: 20px; */
-}
-
 .countdown-container {
   text-align: center;
   font-family: Poppins;
   background-color: #FFFFFA;
   color: black;
-  width: 500px;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .ubicacion {
-  background: #C0CAAF;
-  height: 200px;
+  background: #E4EBD9;
+  height: 300px;
   text-align: center;
   align-items: center;
 }
 
 .asistencia {
-  background: #C0CAAF;
+  background: #E4EBD9;
   height: 300px;
   text-align: center;
   align-items: center;
@@ -296,7 +266,7 @@ export default {
 }
 
 .rounded-circle {
-  background: #C0CAAF;
+  background: #E4EBD9;
 }
 
 /* #carrusel-container {
@@ -360,7 +330,7 @@ export default {
 
 .frase {
   height: 200px;
-  background-color: #C0CAAF;
+  background-color: #E4EBD9;
   text-align: center;
   align-items: center;
 }
@@ -373,30 +343,24 @@ export default {
   display: flex;
 }
 
-.contenedor1 {
+.contenedor-fecha {
   background-image: url('../assets/fondo-countdown.jpg');
-  /* Reemplaza con la ruta de tu imagen */
+  padding: 20px;
+  height: 600px;
+  color: #fff;
   background-size: cover;
-  height: 300px;
-  /* Ajusta la altura según tus necesidades */
+  background-position: center;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 1;
-  /* Z-index más bajo para la imagen */
 }
 
-.contenedor2 {
-  /* background-color: tra; */
-  /* Color de fondo del contenedor 2 con opacidad */
-  background-image: url('../assets/fondo-countdown.jpg');
-  padding: 20px;
-  /* position: relative;
-  z-index: 2; */
-  /* Z-index más alto para el contenedor 2 */
-  height: 1000px;
-  color: #fff;
-  /* Color del texto en el contenedor 2 */
+.contenedor2 img {
+  max-width: 100%;
+}
+
+.centrar-contenedor {
+  width: 80%
 }
 </style>
