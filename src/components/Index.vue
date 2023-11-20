@@ -29,7 +29,7 @@
           <p style="padding: 20px;">
             "Así que no son ya más dos, sino una sola carne; por tanto, lo que Dios juntó, no lo separe el hombre."
           </p>
-          <p style="font-family: Italianno; font-size: xx-large;">Mateo 19:16</p>
+          <p style="font-family: Italianno; font-size: xx-large;">Mateo 19:6</p>
         </div>
         <div v-else class="frase container-fluid text-center">
           <p style="padding: 30px;">
