@@ -34,4 +34,8 @@ export default {
   h3 {
     font-family: Poppins;
   }
+
+  li {
+    font-family: Poppins;
+  }
 </style>
