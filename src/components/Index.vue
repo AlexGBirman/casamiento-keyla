@@ -29,13 +29,13 @@
           <p style="padding: 20px;">
             "Así que no son ya más dos, sino una sola carne; por tanto, lo que Dios juntó, no lo separe el hombre."
           </p>
-          <p style="font-family: Italianno; font-size: xx-large;">Salmos 9:10</p>
+          <p style="font-family: Italianno; font-size: xx-large;">Mateo 19:16</p>
         </div>
         <div v-else class="frase container-fluid text-center">
           <p style="padding: 30px;">
             "Así que no son ya más dos, sino una sola carne; por tanto, <br> lo que Dios juntó, no lo separe el hombre."
           </p>
-          <p style="font-family: Italianno; font-size: xx-large;">Salmos 9:10</p>
+          <p style="font-family: Italianno; font-size: xx-large;">Mateo 19:16</p>
         </div>
       </section> <!-- hecho -->
 
@@ -106,26 +106,54 @@
       <div id="carouselExample" class="carousel slide">
         <div v-if="esMobile" class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../assets/carru1.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+            <img src="../assets/carru6.jpg" class="d-block w-100 imagen-carrusel" alt="...">
           </div>
           <div class="carousel-item">
             <img src="../assets/carru2.jpg" class="d-block w-100 imagen-carrusel" alt="...">
           </div>
           <div class="carousel-item">
+            <img src="../assets/carru9.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+          </div>
+          <div class="carousel-item">
             <img src="../assets/carru3.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/carru5.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/carru4.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/carru7.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../assets/carru1.jpg" class="d-block w-100 imagen-carrusel" alt="...">
           </div>
         </div>
         <div v-else class="carousel-inner">
           <div class="carousel-item active">
             <div class="row">
               <div class="col-4">
-                <img src="../assets/carru1.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+                <img src="../assets/carru6.jpg" class="d-block w-100 imagen-carrusel" alt="...">
               </div>
               <div class="col-4">
                 <img src="../assets/carru2.jpg" class="d-block w-100 imagen-carrusel" alt="...">
               </div>
               <div class="col-4">
+                <img src="../assets/carru9.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-4">
+                <img src="../assets/carru5.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+              </div>
+              <div class="col-4">
                 <img src="../assets/carru3.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+              </div>
+              <div class="col-4">
+                <img src="../assets/carru7.jpg" class="d-block w-100 imagen-carrusel" alt="...">
               </div>
             </div>
           </div>
@@ -135,23 +163,10 @@
                 <img src="../assets/carru1.jpg" class="d-block w-100 imagen-carrusel" alt="...">
               </div>
               <div class="col-4">
-                <img src="../assets/carru2.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+                <img src="../assets/carru4.jpg" class="d-block w-100 imagen-carrusel" alt="...">
               </div>
               <div class="col-4">
-                <img src="../assets/carru3.jpg" class="d-block w-100 imagen-carrusel" alt="...">
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-4">
-                <img src="../assets/carru1.jpg" class="d-block w-100 imagen-carrusel" alt="...">
-              </div>
-              <div class="col-4">
-                <img src="../assets/carru2.jpg" class="d-block w-100 imagen-carrusel" alt="...">
-              </div>
-              <div class="col-4">
-                <img src="../assets/carru3.jpg" class="d-block w-100 imagen-carrusel" alt="...">
+                <img src="../assets/carru6.jpg" class="d-block w-100 imagen-carrusel" alt="...">
               </div>
             </div>
           </div>
@@ -164,9 +179,9 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div> <!-- falta elegir fotos -->
+      </div> <!-- hecho -->
 
-      <div class="contenedor-verde container-fluid h-auto">
+      <div class="contenedor-verde container-fluid h-auto" id="asistencia">
         <img src="../assets/asistencia.png" alt="" style="height: 100px; margin-top: 20px;">
         <div class="container-fluid text-center">
           <p style="font-family: Italianno; font-size: 50px;">Asistencia</p>
@@ -179,26 +194,32 @@
       </div> <!-- hecho -->
 
       <div class="row" id="info-gral">
-        <div class="image-container" :class="{ 'col-4': !esMobile }">
+        <div class="image-container" :class="{ 'col-5': !esMobile }">
           <img src="../assets/dresscode-mobile.jpg" alt="Imagen de encabezado" class="img-fluid" v-if="esMobile">
           <img src="../assets/foto-dresscode.jpg" alt="Imagen de encabezado" class="img-fluid" v-else>
         </div>
-        <div class="contenedor-manteca container-fluid h-auto" :class="{ 'col-8': !esMobile }">
-          <img src="../assets/dresscode.png" alt="" style="height: 100px; margin-top: 20px;">
+        <div class="contenedor-manteca container-fluid h-auto" :class="{ 'col-7': !esMobile }">
+          <img src="../assets/dresscode.png" alt="" style="height: 100px; margin-top: 10px;">
           <div class="container-fluid text-center">
             <p style="font-family: Italianno; font-size: 50px;">Código de vestimenta</p>
-            <p>Elegante y elegante sport</p>
+            <p>Elegante y elegante sport,</p>
           </div>
-          <img src="../assets/info.png" alt="" style="height: 100px; margin-top: 20px;">
+          <img src="../assets/info.png" alt="" style="height: 100px; margin-top: 10px;">
           <div class="container-fluid text-center">
             <p style="font-family: Italianno; font-size: 50px;">Info general</p>
             <div class="container-fluid text-center">
               <ul class="text-start">
-                <li>El lugar tiene estacionamiento con capacidad para todos los autos</li>
-                <li>Confirmar asistencia antes del 01/01/2024</li>
-                <li>Chequeá esta invitación unos días antes de la fiesta para encontrar tu ubicación de mesa y algunos
-                  detalles más</li>
-                <li>Te pedimos que seas puntual, ya que <b>la ceremonia comenzará 19:30hs</b></li>
+                <li>El lugar tiene estacionamiento con capacidad para todos los autos.</li>
+                <li>Chequeá esta invitación unos días antes de la fiesta, para encontrar tu ubicación de mesa y algunos
+                  detalles más.</li>
+                <li>Te pedimos que seas puntual, ya que <b>la ceremonia comenzará 19:30hs.</b></li>
+              </ul> <br>
+            </div>
+            <p>Ante cualquier duda, comunicarse con:</p>
+            <div class="container-fluid text-center">
+              <ul class="text-start">
+                <li>Natalia: <a href="#info-gral" @click="mensajeNatalia()">+5491157644341</a></li>
+                <li>Melody: <a href="#info-gral" @click="mensajeMelody()">+5491135176383</a></li>
               </ul>
             </div>
           </div>
@@ -206,9 +227,11 @@
       </div> <!-- hecho -->
 
       <div class="contenedor-verde container-fluid h-auto">
+        <img src="../assets/regalo.png" alt="" style="height: 100px; margin-top: 10px;">
         <div class="container-fluid text-center">
-          <p style="font-family: Italianno; font-size: 3rem; margin-bottom: 0; margin-top: 10px;">Nuestro sueño</p>
-          <p>Si querés ayudarnos a conseguir nuestra casa o nuestra luna de miel, podés hacernos una transferencia a la siguiente cuenta:</p>
+          <p style="font-family: Italianno; font-size: 3rem;">Regalos</p>
+          <p>Si deseás obsequiarnos algo para ayudarnos con nuestra luna de miel y/o casa, podés hacerlo de la siguiente
+            manera:</p>
           <div class="container-fluid text-center">
             <ul class="text-start">
               <li><b>Caja de Ahorro:</b> 010001500027447811</li>
@@ -223,10 +246,7 @@
 
       <div class="contenedor-manteca container-fluid" id="anillos">
         <div class="container-fluid text-center contenedor-anillos">
-          <div class="">
-            <p v-if="esMobile" style="font-family: Italianno; font-size: 50px; padding: 40px;">Gusti <br> & Kei</p>
-            <p v-else style="font-family: Italianno; font-size: 50px; padding: 75px;">Gusti & Kei</p>
-          </div>
+          <div class=""></div>
         </div>
       </div> <!-- hecho -->
 
@@ -260,6 +280,12 @@ export default {
     },
     confirmarAsistencia() {
       window.open('https://forms.gle/2WEuM3orjG7DQ1K18', '_blank')
+    },
+    mensajeNatalia() {
+      window.open('https://wa.me/5491157644341', '_blank')
+    },
+    mensajeMelody() {
+      window.open('https://wa.me/5491135176383', '_blank')
     },
   },
   computed: {
@@ -319,12 +345,12 @@ export default {
 
 .navbar {
   height: 75px;
-  background: #FEFBFB;
+  background: #FFFFFA;
 }
 
 .navbar-mobile {
   height: 50px;
-  background: #FEFBFB;
+  background: #FFFFFA;
 }
 
 @font-face {
@@ -344,7 +370,7 @@ export default {
 .navbar-brand {
   display: block;
   text-align: center;
-  background: #FEFBFB;
+  background: #FFFFFA;
 }
 
 #header-title {
@@ -377,25 +403,25 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #FEFBFB;
+  background-color: #FFFFFA;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FEFBFB;
+  color: #FFFFFA;
 }
 
 .navbar-brand-container-mobile .circular-container-mobile {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #FEFBFB;
+  background-color: #FFFFFA;
   /* Color del fondo del contenedor circular */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FEFBFB;
+  color: #FFFFFA;
   /* Color del texto */
 }
 
@@ -427,10 +453,12 @@ export default {
 
 .contenedor-anillos {
   margin-top: 0px;
-  background-image: url('../assets/anillos.png');
-  background-size: 150px; /* Ajusta la imagen para cubrir completamente el contenedor */
-  background-position: center; /* Centra la imagen horizontal y verticalmente */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-image: url('../assets/anillos-dorado.png');
+  background-size: 150px;
+  /* Ajusta la imagen para cubrir completamente el contenedor */
+  background-position: center;
+  /* Centra la imagen horizontal y verticalmente */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
   height: 200px;
-}
-</style>
+}</style>
