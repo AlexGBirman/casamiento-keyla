@@ -35,7 +35,7 @@
           <p style="padding: 30px;">
             "Así que no son ya más dos, sino una sola carne; por tanto, <br> lo que Dios juntó, no lo separe el hombre."
           </p>
-          <p style="font-family: Italianno; font-size: xx-large;">Mateo 19:16</p>
+          <p style="font-family: Italianno; font-size: xx-large;">Mateo 19:6</p>
         </div>
       </section> <!-- hecho -->
 
@@ -51,35 +51,44 @@
               </div>
               <div class="countdown-display">
                 <div class="row">
-                  <div class="col-4 text-center">
+                  <div class="col-3 text-center">
                     <h5>{{ days }}</h5>
                   </div>
-                  <div class="col-4 text-center">
+                  <div class="col-3 text-center">
+                    <h5>{{ hours }}</h5>
+                  </div>
+                  <div class="col-3 text-center">
                     <h5>{{ minutes }}</h5>
                   </div>
-                  <div class="col-4 text-center">
+                  <div class="col-3 text-center">
                     <h5>{{ seconds }}</h5>
                   </div>
                 </div>
                 <div v-if="esMobile" class="row">
-                  <div class="col-4 text-center" style="font-size: 12px;">
+                  <div class="col-3 text-center" style="font-size: 12px;">
                     <p>días</p>
                   </div>
-                  <div class="col-4 text-center" style="font-size: 12px;">
+                  <div class="col-3 text-center" style="font-size: 12px;">
+                    <p>horas</p>
+                  </div>
+                  <div class="col-3 text-center" style="font-size: 12px;">
                     <p>minutos</p>
                   </div>
-                  <div class="col-4 text-center" style="font-size: 12px;">
+                  <div class="col-3 text-center" style="font-size: 12px;">
                     <p>segundos</p>
                   </div>
                 </div>
                 <div v-else class="row">
-                  <div class="col-4 text-center">
+                  <div class="col-3 text-center">
                     <p>días</p>
                   </div>
-                  <div class="col-4 text-center">
+                  <div class="col-3 text-center">
+                    <p>horas</p>
+                  </div>
+                  <div class="col-3 text-center">
                     <p>minutos</p>
                   </div>
-                  <div class="col-4 text-center">
+                  <div class="col-3 text-center">
                     <p>segundos</p>
                   </div>
                 </div>
